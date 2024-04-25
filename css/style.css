@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #000000;
+  font-family: "NeueMontreal";
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url(../fonts/NEUEMONTREAL-REGULAR.OTF);
+}
+
+@font-face {
+  font-family: 'StudioFeixenEdgy';
+  src: url(../fonts/STUDIOFEIXENEDGYTRIAL-SEMIBOLD.TTF);
+}
+
+.fl-page {
+  overflow: hidden;
+}
+::selection {
+  background: #F24E1F;
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+.container {
+  max-width: 1200px !important;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+img {
+  max-width: 100%;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+h1,h2,h3,h4 {
+  color:#fff;
+  line-height: 1;
+  font-weight: 600;
+  font-family: 'StudioFeixenEdgy';
+  font-feature-settings: "ss05";
+  letter-spacing: -0.06em;
+}
+h1 {
+  font-size: 70px;
+}
+h2 {
+  font-size: 46px;
+}
+h3 {
+  font-size: 32px;
+}
+h4 {
+  font-size: 24px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #B4B4B4;
+  line-height: 1.6;
+}
+.text-white {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+a:hover {
+  color: #F24E1F;
+}
+a.btn-all {
+  background: #212121;
+  border-radius: 30px;
+  padding:16px 32px;
+  line-height: 1;
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+}
+
+.join-telegram {
+  padding: 48px 0;
+  background: url('../images/join-telegram.svg');
+  background-size: 100% auto;
+  background-position: center;
+}
+.join-telegram h2 {
+  margin-bottom: 0;
+}
+
+.form-control {
+  background-color:#0F0F0F !important;
+  border: 1px solid #3A3A3A !important;
+  padding: 15px;
+  color: #fff !important;
+  border-radius: 10px;
+  transition: all .2s ease !important;
+}
+.form-control:focus {
+  outline: 0;
+  border-color: transparent !important;
+  box-shadow: 0 0 0.25rem 0.25rem rgba(242, 78, 31,.25);
+}
+.form-group label {
+  color: #fff;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.btn-arrow {
+  background-color: #212121;
+  border-radius: 30px;
+  padding:10px 10px 10px 40px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-arrow img {
+  margin-left: 30px;
+}
+
+@media(max-width:1024px){
+  h1 {
+    font-size: 46px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
+
+@media(max-width:767px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .join-telegram {
+    padding: 30px 0;
+  }
+}
