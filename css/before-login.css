@@ -6,6 +6,8 @@
     background:url('../images/before-login-bg.svg');
     background-size: cover;
     background-position: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .before-login .container {
     max-width: 666px !important;
@@ -151,6 +153,13 @@
 }
 .after-login__top-row__user-right span:last-of-type {
     color: #B4B4B4;
+}
+
+#header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 @media(min-width:768px){

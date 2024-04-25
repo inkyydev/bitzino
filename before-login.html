@@ -9,11 +9,14 @@
     />
     <title>Bitzino - Before Login</title>
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/before-login.css" />
   </head>
   <body>
     <div class="fl-page">
+
+      <div id="header"></div>
 
       <section class="before-login">
         <div class="container">
@@ -49,5 +52,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("includes/header.html");
+      });
+    </script>
   </body>
 </html>

@@ -9,11 +9,15 @@
     />
     <title>Bitzino - Terms of Service</title>
     <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/terms.css" />
   </head>
   <body>
     <div class="fl-page">
+
+      <div id="header"></div>
 
       <section class="terms">
         <div class="container">
@@ -71,11 +75,19 @@
 
         </div>
       </section>
+      
+      <div id="footer"></div>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("includes/header.html");
+        $("#footer").load("includes/footer.html");
+      });
+    </script>
   </body>
 </html>
