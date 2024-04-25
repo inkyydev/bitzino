@@ -1,0 +1,34 @@
+<div class="header-wrapper">
+  <div class="main-nav">
+    <div class="main-nav__logo">
+      <a href="/"><img src="../images/logo.svg" alt="logo" /></a>
+    </div>
+    <div class="main-nav__items">
+      <a href="#">home</a>
+      <a href="#">about us</a>
+      <a href="#">Core Values</a>
+      <a href="#">Tokenomics</a>
+      <a href="#">Roadmap</a>
+    </div>
+    <div class="main-nav__button--contact">
+      <a href="#" class="btn-all">Contact us</a>
+    </div>
+    <div class="main-nav__hamburger">
+      <span class="line-1"></span>
+      <span class="line-2"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    function toggleNav() {
+      $(".main-nav__hamburger").toggleClass("active");
+      $(".main-nav__items").toggleClass("active");
+      $("body").toggleClass("active");
+    }
+
+    $(".main-nav__hamburger").on("click", toggleNav);
+    $(".main-nav__items a").on("click", toggleNav);
+  });
+</script>

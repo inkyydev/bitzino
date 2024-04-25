@@ -18,7 +18,10 @@ body {
   font-family: 'StudioFeixenEdgy';
   src: url(../fonts/STUDIOFEIXENEDGYTRIAL-SEMIBOLD.TTF);
 }
-
+body.active{
+  max-height: 100vh;
+  overflow: hidden;
+}
 .fl-page {
   overflow: hidden;
 }
