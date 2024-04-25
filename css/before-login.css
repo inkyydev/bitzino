@@ -1,0 +1,182 @@
+.before-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('../images/before-login-bg.svg');
+    background-size: cover;
+    background-position: center;
+}
+.before-login .container {
+    max-width: 666px !important;
+}
+.before-login .before-login-box {
+    border-radius: 40px;
+    background:linear-gradient(to bottom, #1d1d1d, #000);
+    padding: 30px;
+}
+.before-login__top-row {
+    align-items: center;
+}
+.before-login__top-row__col-right {
+    text-align: right;
+}
+.before-login__top-row__col-right img {
+    width: 140px;
+}
+.before-login__top-row__price {
+    display: flex;
+    flex-direction: column;
+}
+.before-login__top-row__price .price-amount{
+    font-size: 26px;
+    color:#fff;
+    line-height: 1;
+    font-weight: 600;
+    font-family: 'StudioFeixenEdgy';
+    font-feature-settings: "ss01";
+    letter-spacing: -0.06em;
+}
+.before-login__top-row__price .price-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #B4B4B4;
+}
+.before-login__inner {
+    border: 1px solid #2E2E2E;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.before-login__inner h1 {
+    font-size: 38px;
+    max-width: 350px;
+    margin: 0 auto 20px;
+}
+.before-login__inner p {
+    max-width: 360px;
+    margin: 0 auto 20px
+}
+
+.after-login__bottom-row__box {
+    background:linear-gradient(to bottom, #303030, rgba(34,34,34,0.72));
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 10px;
+}
+.after-login__bottom-row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.after-login__bottom-row > div {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.after-login__bottom-row__box .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.after-login__bottom-row__box .row > div {
+    padding: 0;
+}
+.after-login__bottom-row__box .row > div:first-of-type {
+    display: flex;
+    flex-direction: column;   
+    gap: 5px;
+}
+.after-login__bottom-row__box .row > div:last-of-type {
+    text-align: right;
+}
+.after-login__bottom-row__box-title {
+    color: #B4B4B4;
+    font-size: 14px;
+}
+.after-login__bottom-row__box-number {
+    font-size:20px;
+    line-height: 1;
+    font-weight: 600;
+    font-family: 'StudioFeixenEdgy';
+    font-feature-settings: "ss01";
+    letter-spacing: -0.06em;
+}
+.after-login .before-login__inner {
+    margin-top: 15px;
+}
+.after-login__top-row {
+    margin-bottom: 20px;
+    align-items: center;
+}
+.after-login__top-row__rank-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.after-login__top-row__title {
+    color:#b4b4b4;
+    font-size: 14px;
+}
+.after-login__top-row__amount {
+    color:#fff;
+    font-size: 14px;
+}
+.after-login__top-row__rank-bottom {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'StudioFeixenEdgy';
+    font-feature-settings: "ss01";
+    letter-spacing: -0.06em;
+}
+.after-login__top-row__user {
+    margin: 0 !important;
+    align-items: center;
+}
+.after-login__top-row__user > div {
+    padding: 0 !important;
+}
+.after-login__top-row__user-right {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+}
+.after-login__top-row__user-right span {
+    margin:2px 0 2px 5px;
+    display: inline-block;
+}
+.after-login__top-row__user-right span:last-of-type {
+    color: #B4B4B4;
+}
+
+@media(min-width:768px){
+    .after-login .before-login__inner .btn-all {
+        font-size: 16px;
+    }
+}
+@media(max-width:767px){
+    .after-login__top-row__rank {
+        margin-bottom: 15px;
+    }
+    .before-login__inner {
+        padding: 30px 20px;
+    }
+    .before-login__inner h1 {
+        font-size: 24px;
+    }
+    .before-login .container {
+        padding-left: 20px !important;
+        padding-right:20px !important;
+    }
+    .before-login .btn-arrow img {
+        margin-left: 10px;
+    }
+    .before-login .btn-arrow {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+}
