@@ -11,18 +11,97 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="fl-page">
       <div id="header"></div>
+
       <main>
+        <section id="banner_section">
+          <div class="container">
+            <div class="banner-wrapper">
+              <div class="banner-wrapper__content">
+                <div class="banner-heading">
+                  <h1 class="heading-anim">
+                    <div class="anim-span">
+                      <span>Welcome to</span>
+                    </div>
+                    <div class="anim-span">
+                      <span>the</span>
+                    </div>
+                    <div class="anim-span">
+                      <span class="linear-heading">Bitzino</span>
+                    </div>
+                    <div class="anim-span anim-blockchain">
+                      <span class="linear-heading"
+                        >Blockhain Revolutionizing</span
+                      >
+                    </div>
+                    <div class="anim-span">
+                      <span>Online</span>
+                    </div>
+                    <div class="anim-span">
+                      <span class="linear-heading">Gambling</span>
+                    </div>
+                  </h1>
+                </div>
+                <p>
+                  Welcome to BitZino, the pioneer in online Bitcoin casino
+                  gaming since 2011.
+                </p>
+                <div class="btn-group">
+                  <a href="#" class="btn-arrow magic-hover magic-hover__square">
+                    <span>Watch the Film</span>
+                    <img src="images/btn-arrow.svg" alt="arrow" />
+                  </a>
+                  <a href="#" class="btn-arrow magic-hover magic-hover__square">
+                    <span>View Whitepaper</span>
+                    <img src="images/btn-arrow.svg" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+              <div class="banner-phone-anim">
+                <div class="phone-anim-single phone-anim-single__4">
+                  <img src="images/phone-hearth.png" alt="" />
+                </div>
+                <div class="phone-anim-single phone-anim-single__2">
+                  <img src="images/phone-pik.svg" alt="" />
+                </div>
+                <div class="phone-anim-single phone-anim-single__3">
+                  <img src="images/phone-heartz.svg" alt="" />
+                </div>
+                <div class="phone-anim-single phone-anim-single__1">
+                  <img src="images/phone-anim.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="bitzino_section">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="bitzino-info-single">
+                  <img src="images/vision-icon.svg" alt="vision" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="join-telegram">
           <div class="container">
-            <h2>Join us on telegram</h2>
+            <a href="#" target="_blank">
+              <img src="images/telegram-icon.svg" alt="Telegram" />
+              <h2>Join us on telegram</h2>
+            </a>
           </div>
         </section>
       </main>
+
       <div id="footer"></div>
     </div>
 
@@ -32,12 +111,85 @@
       type="text/javascript"
       src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
 
     <script>
       $(function () {
         $("#header").load("includes/header.html");
         $("#footer").load("includes/footer.html");
+      });
+    </script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const tl = gsap.timeline();
+
+      tl.from(".anim-span span", 1.5, {
+        y: "100%",
+        ease: "power4.out",
+        delay: 1,
+        skewY: 0,
+        stagger: {
+          amount: 0.8,
+        },
+      });
+
+      $("#banner_section").each(function (index) {
+        let triggerElement = $(this);
+        let targetElement = $(".phone-anim-single");
+        let targetElement1 = $(".phone-anim-single__1");
+        let targetElement2 = $(".phone-anim-single__2");
+        let targetElement3 = $(".phone-anim-single__3");
+        let targetElement4 = $(".phone-anim-single__4");
+
+        let tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: triggerElement,
+            start: "top top",
+            end: "bottom 80%",
+            scrub: 0.5,
+            markers: true,
+          },
+        });
+        tl.to(targetElement, {
+          scale: 1,
+          bottom: "-13%",
+          duration: 1,
+        })
+          .to(targetElement1, {
+            left: "10%",
+            duration: 1,
+          })
+          .to(
+            targetElement4,
+            {
+              left: "90%",
+              scale: 1,
+              duration: 1,
+            },
+            "-=1"
+          )
+          .to(
+            targetElement3,
+            {
+              left: "37%",
+              scale: 1,
+              duration: 1,
+            },
+            "-=.5"
+          )
+          .to(
+            targetElement2,
+            {
+              left: "64%",
+              scale: 1,
+              duration: 1,
+            },
+            "-=1"
+          );
       });
     </script>
   </body>

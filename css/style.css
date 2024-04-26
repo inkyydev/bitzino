@@ -101,6 +101,11 @@ a.btn-all {
 .join-telegram h2 {
   margin-bottom: 0;
 }
+.join-telegram a{
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
 
 .form-control {
   background-color:#0F0F0F !important;
@@ -170,5 +175,8 @@ a.btn-all {
   }
   .join-telegram {
     padding: 30px 0;
+  }
+  .join-telegram a{
+    gap: 15px;
   }
 }

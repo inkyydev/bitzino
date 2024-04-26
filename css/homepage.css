@@ -1,0 +1,149 @@
+.fl-page{
+    overflow: visible !important;
+}
+#banner_section{
+    min-height: 2000px;
+    position: relative;
+}
+#banner_section::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 81.25%);
+    height: 96px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+#banner_section .container{
+    position: sticky;
+    top: 0;
+}
+.banner-wrapper{
+    padding-top: 30px;
+    min-height: calc(100vh - 140px);
+}
+.banner-wrapper__content{
+    position: relative;
+    z-index: 9;
+}
+.anim-span {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    line-height: normal;
+}
+.anim-span span {
+    display: inline-block;
+}
+.banner-heading{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.linear-heading{
+    background: linear-gradient(109deg, #FFF 54.44%, #000 105.68%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn-group{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 40px;
+    margin-bottom: 110px;
+}
+.banner-wrapper__content p{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.anim-blockchain{
+    margin: -6px 0;
+}
+.banner-phone-anim{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    max-width: 919px;
+}
+.banner-phone-anim .phone-anim-single{
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%) scale(1.8);
+    min-width: 200px;
+    width: 200px;
+}
+/* vision */
+#bitzino_section{
+    background: #000000;
+    position: relative;
+    z-index: 9;
+}
+.bitzino-info-single{
+    border-radius: 40px;
+    background: linear-gradient(192deg, #1D1D1D 12.73%, #000 91.41%);
+    padding: 95px 79px;
+
+}
+@media(max-width: 1500px){
+    .banner-phone-anim .phone-anim-single{
+        transform: translateX(-50%) scale(1.5);
+    }
+}
+@media(max-height: 800px){
+    .banner-wrapper{
+        padding-bottom: 235px;
+    }
+}
+@media(max-width: 1024px){
+    .banner-phone-anim .phone-anim-single{
+        min-width: 170px;
+        width: 170px;
+    }
+    .banner-phone-anim .phone-anim-single{
+        transform: translateX(-50%) scale(2.4);
+    }
+}
+@media(max-width: 767px){
+    .banner-heading h1{
+        font-size: 28px;
+    }
+    .btn-group{
+        gap: 5px;
+    }
+    .banner-wrapper .btn-arrow img{
+        margin-left: 10px;
+    }
+    .banner-wrapper .btn-arrow{
+        padding: 5px 5px 5px 10px;
+        font-size: 12px;
+    }
+    .btn-arrow img{
+        margin-left: 8px;
+    }
+    .banner-phone-anim .phone-anim-single{
+        min-width: 170px;
+        width: 170px;
+    }
+    .banner-phone-anim .phone-anim-single{
+        transform: translateX(-50%) scale(2.5);
+    }
+    .banner-wrapper__content p{
+        margin-top: 10px;
+    }
+    .btn-group{
+        margin-top: 20px;
+    }
+    .banner-phone-anim .phone-anim-single {
+        min-width: 90px;
+        width: 90px;
+        bottom: 0;
+    }
+}
