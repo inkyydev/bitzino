@@ -27,8 +27,9 @@
       $(".main-nav__items").toggleClass("active");
       $("body").toggleClass("active");
     }
-
-    $(".main-nav__hamburger").on("click", toggleNav);
-    $(".main-nav__items a").on("click", toggleNav);
+    if ($(window).width() < 1024) {
+      $(".main-nav__hamburger").on("click", toggleNav);
+      $(".main-nav__items a").on("click", toggleNav);
+    }
   });
 </script>

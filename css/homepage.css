@@ -67,10 +67,27 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.6);
+    opacity: 0;
+    transition: all 1s ease;
     width: 100%;
     height: 100%;
     max-width: 919px;
+}
+.banner-phone-anim.active{
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+.btn-group,
+.banner-wrapper__content p{
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all .5s ease;
+}
+.btn-group.active,
+.banner-wrapper__content p.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 .banner-phone-anim .phone-anim-single{
     position: absolute;
@@ -90,7 +107,87 @@
     border-radius: 40px;
     background: linear-gradient(192deg, #1D1D1D 12.73%, #000 91.41%);
     padding: 95px 79px;
-
+}
+.bitzino-info-single h3{
+    margin: 30px 0 35px;
+}
+.bitzino-info-single p{
+    color: #fff;
+    max-width: 330px;
+}
+/* core values */
+#core_values{
+    padding: 49px 0 38px;
+    position: relative;
+    border-bottom: 1px solid #3A3A3A;
+}
+.line-section::after{
+    content: '';
+    position: absolute;
+    background: #3A3A3A;
+    width: 0%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    transition: all 1s ease;
+}
+.line-section::before{
+    content: '';
+    position: absolute;
+    background: #3A3A3A;
+    width: 0%;
+    height: 1px;
+    right: 0;
+    top: 170px;
+    transition: all 1s ease;
+}
+.line-section.active::before,
+.line-section.active::after{
+    width: 100%;
+}
+.core-values-heading{
+    text-align: center;
+}
+.core-values-heading h2{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all .5s ease;
+    transition-delay: .5s;
+}
+.core-values-heading p{
+    opacity: 0;
+    margin-top: 15px;
+    position: relative;
+    transition: all .5s ease;
+    transition-delay: .7s;
+}
+.line-section.active .core-values-heading p,
+.line-section.active .core-values-heading h2{
+    transform: translateY(0);
+    opacity: 1;
+}
+.core-values-heading{
+    position: relative;
+}
+.core-values-wrapper{
+    margin-top: 90px;
+}
+.core-values-single{
+    padding: 57px 40px;
+    border-right: 1px solid #3A3A3A;
+}
+.core-values-single h4{
+    margin: 50px 0 25px;
+}
+.core-values-single p{
+    max-width: 222px;
+}
+.core-values-single-last{
+    border: none !important;
+}
+/* our vision */
+#our_vision{
+    position: relative;
 }
 @media(max-width: 1500px){
     .banner-phone-anim .phone-anim-single{
@@ -102,6 +199,11 @@
         padding-bottom: 235px;
     }
 }
+@media(max-width: 1200px){
+    .core-values-single{
+        padding: 40px 25px;
+    }
+}
 @media(max-width: 1024px){
     .banner-phone-anim .phone-anim-single{
         min-width: 170px;
@@ -109,6 +211,10 @@
     }
     .banner-phone-anim .phone-anim-single{
         transform: translateX(-50%) scale(2.4);
+    }
+    .bitzino-info-single{
+        padding: 40px 30px;
+        border-radius: 25px;
     }
 }
 @media(max-width: 767px){
@@ -136,7 +242,7 @@
         transform: translateX(-50%) scale(2.5);
     }
     .banner-wrapper__content p{
-        margin-top: 10px;
+        margin-top: 20px;
     }
     .btn-group{
         margin-top: 20px;
@@ -145,5 +251,32 @@
         min-width: 90px;
         width: 90px;
         bottom: 0;
+    }
+    .bitzino-info-single{
+        padding: 30px 20px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    .bitzino-info-single h3{
+        margin: 25px 0 20px;
+    }
+    #core_values{
+        padding: 40px 0;
+    }
+    .core-values-single{
+        border-bottom: 1px solid #3A3A3A;
+        border-right: 0;
+    }
+    .core-values-single{
+        padding: 30px;
+    }
+    .core-values-single p{
+        margin-bottom: 0;
+    }
+    .core-values-single h4{
+        margin: 25px 0 15px;
+    }
+    .core-values-wrapper{
+        margin-top: 50px;
     }
 }

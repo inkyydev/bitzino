@@ -1,9 +1,4 @@
 $(document).ready(function(){
-    $('.main-nav__hamburger').on('click', function(){
-        $(this).toggleClass('active');
-        $('.main-nav__menu--wrapper').toggleClass('active');
-        $('body').toggleClass('active');
-    });
 
     options = {
         "cursorOuter": "circle-basic",

@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -16,7 +17,29 @@
   </head>
   <body>
     <div class="fl-page">
-      <div id="header"></div>
+      <div id="header">
+        <div class="header-wrapper">
+          <div class="main-nav">
+            <div class="main-nav__logo">
+              <a href="/"><img src="../images/logo.svg" alt="logo" /></a>
+            </div>
+            <div class="main-nav__items">
+              <a href="#">home</a>
+              <a href="#">about us</a>
+              <a href="#">Core Values</a>
+              <a href="#">Tokenomics</a>
+              <a href="#">Roadmap</a>
+            </div>
+            <div class="main-nav__button--contact">
+              <a href="#" class="btn-all">Contact us</a>
+            </div>
+            <div class="main-nav__hamburger">
+              <span class="line-1"></span>
+              <span class="line-2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <main>
         <section id="banner_section">
@@ -62,18 +85,20 @@
                   </a>
                 </div>
               </div>
-              <div class="banner-phone-anim">
-                <div class="phone-anim-single phone-anim-single__4">
-                  <img src="images/phone-hearth.png" alt="" />
-                </div>
-                <div class="phone-anim-single phone-anim-single__2">
-                  <img src="images/phone-pik.svg" alt="" />
-                </div>
-                <div class="phone-anim-single phone-anim-single__3">
-                  <img src="images/phone-heartz.svg" alt="" />
-                </div>
-                <div class="phone-anim-single phone-anim-single__1">
-                  <img src="images/phone-anim.svg" alt="" />
+              <div class="banner-phone-anim-wrapper">
+                <div class="banner-phone-anim">
+                  <div class="phone-anim-single phone-anim-single__4">
+                    <img src="images/phone-hearth.png" alt="" />
+                  </div>
+                  <div class="phone-anim-single phone-anim-single__2">
+                    <img src="images/phone-pik.svg" alt="" />
+                  </div>
+                  <div class="phone-anim-single phone-anim-single__3">
+                    <img src="images/phone-heartz.svg" alt="" />
+                  </div>
+                  <div class="phone-anim-single phone-anim-single__1">
+                    <img src="images/phone-anim.svg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,9 +110,140 @@
             <div class="row">
               <div class="col-12 col-md-6">
                 <div class="bitzino-info-single">
-                  <img src="images/vision-icon.svg" alt="vision" />
+                  <img
+                    src="images/vision-icon.svg"
+                    alt="vision"
+                    data-aos="fade-in"
+                    data-aos-delay="200"
+                  />
+                  <h3 data-aos="fade-in" data-aos-delay="200">
+                    The BitZino Vision
+                  </h3>
+                  <p data-aos="fade-in" data-aos-delay="200">
+                    Welcome to BitZino, the pioneer in online Bitcoin casino
+                    gaming since 2011. We are entering a new chapter in 2024,
+                    presenting an unparalleled BTC Layer 2 network that promises
+                    to redefine the essence of online betting.
+                  </p>
+                  <p data-aos="fade-in" data-aos-delay="200">
+                    <b
+                      >This is not just an online casino; it's a revolution in
+                      the digital gaming arena.</b
+                    >
+                  </p>
                 </div>
               </div>
+              <div class="col-12 col-md-6">
+                <div class="bitzino-info-single">
+                  <img
+                    src="images/gamin-icons.svg"
+                    alt="vision"
+                    data-aos="fade-in"
+                    data-aos-delay="200"
+                  />
+                  <h3 data-aos="fade-in" data-aos-delay="200">Beyond Gaming</h3>
+                  <p data-aos="fade-in" data-aos-delay="200">
+                    Our mission transcends the traditional realms of gaming.
+                    BitZino strives to create a perfect symbiosis of trust, as
+                    rendered by cryptocurrency and provable fairness, with the
+                    exhilarating buzz of AI-driven gaming experiences.
+                  </p>
+                  <p data-aos="fade-in" data-aos-delay="200">
+                    <b
+                      >We're more than just a gaming platform; we're an
+                      ecosystem for players to become a key part of our
+                      intelligent, responsive network.</b
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="core_values" class="line-section">
+          <div class="container">
+            <div class="core-values-heading">
+              <h2>Core Values</h2>
+              <p>
+                BitZino prioritizes game integrity through advanced provable
+                fairness technology.
+              </p>
+            </div>
+          </div>
+          <div class="core-values-wrapper">
+            <div class="row">
+              <div class="col-12 col-lg-3 col-md-6">
+                <div class="core-values-single">
+                  <img src="images//core-1.svg" alt="hearth" />
+                  <h4 class="anim-up-gsap">Transparency</h4>
+                  <p class="anim-up-gsap">
+                    We pride ourselves on our cutting-edge provable fairness
+                    technology, ensuring crystal-clear transparency in every
+                    game.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3 col-md-6">
+                <div class="core-values-single">
+                  <img src="images//core-1.svg" alt="hearth" />
+                  <h4 class="anim-up-gsap">Community Power</h4>
+                  <p class="anim-up-gsap">
+                    Our platform is designed <br />
+                    from the ground up to build <br />
+                    and nurture a thriving <br />
+                    gaming community.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3 col-md-6">
+                <div class="core-values-single">
+                  <img src="images//core-1.svg" alt="hearth" />
+                  <h4 class="anim-up-gsap">Innovation</h4>
+                  <p class="anim-up-gsap">
+                    We are the original <br />
+                    innovators of Bitcoin casino <br />
+                    gaming, and we're raising the <br />
+                    bar with AI integration.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3 col-md-6">
+                <div class="core-values-single core-values-single-last">
+                  <img src="images//core-1.svg" alt="hearth" />
+                  <h4 class="anim-up-gsap">Bitcoin Commitment</h4>
+                  <p class="anim-up-gsap">
+                    Bitcoin is more than just a <br />
+                    transaction mode for us; it's <br />
+                    the cornerstone of our <br />
+                    betting infrastructure.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="our_vision">
+          <div id="canvas-wrapper">
+            <canvas width="500px" height="500px" id="canvas"></canvas>
+          </div>
+          <div class="container">
+            <div class="vision-wrapper">
+              <h5>Our Vision</h5>
+              <h2>Leading the Online Betting Evolution</h2>
+              <p>
+                BitZino is at the forefront of a new era in online betting,
+                blending the reliability of blockchain with the dynamism of AI.
+                We are not just a platform; we are a community where technology
+                harmonizes with tradition, and every player finds their place in
+                the future of gaming.
+              </p>
+              <p>
+                Join us in this journey, where every bet is a new adventure,
+                every game a discovery, and every moment shared with a global
+                community of players.
+              </p>
             </div>
           </div>
         </section>
@@ -113,84 +269,146 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/homepageAnim.js"></script>
 
     <script>
       $(function () {
-        $("#header").load("includes/header.html");
         $("#footer").load("includes/footer.html");
+      });
+
+      $(document).ready(function () {
+        AOS.init({
+          duration: 800,
+          once: true,
+        });
       });
     </script>
 
     <script>
-      gsap.registerPlugin(ScrollTrigger);
+      let width, height;
+      let pixels = [];
+      let coloredPixels = [];
+      let colors = ["#F24E1E", "#0A84FF", "#17CF8D"];
+      let currentPixel = 0;
+      const mousePosition = {
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2,
+      };
 
-      const tl = gsap.timeline();
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
 
-      tl.from(".anim-span span", 1.5, {
-        y: "100%",
-        ease: "power4.out",
-        delay: 1,
-        skewY: 0,
-        stagger: {
-          amount: 0.8,
-        },
-      });
+      const pixelWidth = 10;
+      const pixelHeight = 10;
+      const pixelMargin = 2;
 
-      $("#banner_section").each(function (index) {
-        let triggerElement = $(this);
-        let targetElement = $(".phone-anim-single");
-        let targetElement1 = $(".phone-anim-single__1");
-        let targetElement2 = $(".phone-anim-single__2");
-        let targetElement3 = $(".phone-anim-single__3");
-        let targetElement4 = $(".phone-anim-single__4");
+      const resize = () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        pixels = [];
+        for (var y = 0; y < height / (pixelHeight + pixelMargin); y++) {
+          for (var x = 0; x < width / (pixelWidth + pixelMargin); x++) {
+            pixels.push([
+              x * (pixelWidth + pixelMargin),
+              y * (pixelHeight + pixelMargin),
+              pixelWidth,
+              pixelHeight,
+              "#222",
+              1,
+            ]);
+          }
+        }
+      };
 
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: triggerElement,
-            start: "top top",
-            end: "bottom 80%",
-            scrub: 0.5,
-            markers: true,
-          },
+      const drawGrid = () => {
+        ctx.clearRect(0, 0, width, height);
+
+        for (var i = 0, l = pixels.length; i < l; i++) {
+          pixels[i][4] = 0;
+        }
+
+        for (var i = 0, l = coloredPixels.length; i < l; i++) {
+          var pix =
+            Math.floor(coloredPixels[i].y / (pixelHeight + pixelMargin)) *
+              (Math.floor(width / (pixelWidth + pixelMargin)) + 1) +
+            Math.floor(coloredPixels[i].x / (pixelWidth + pixelMargin));
+          if (pixels[pix]) {
+            pixels[pix][4] = coloredPixels[i].color;
+            pixels[pix][5] = coloredPixels[i].alpha;
+          }
+
+          if (coloredPixels[i].alpha > 0) coloredPixels[i].alpha -= 0.008;
+          if (coloredPixels[i].alpha < 0) coloredPixels[i].alpha = 0;
+          coloredPixels[i].x += coloredPixels[i].vx;
+          coloredPixels[i].y += coloredPixels[i].vy;
+        }
+
+        for (var i = 0, l = pixels.length; i < l; i++) {
+          ctx.globalAlpha = 1;
+          ctx.fillStyle = "#222";
+          ctx.fillRect(pixels[i][0], pixels[i][1], pixels[i][2], pixels[i][3]);
+          ctx.globalAlpha = pixels[i][5];
+          ctx.fillStyle = pixels[i][4];
+          ctx.fillRect(pixels[i][0], pixels[i][1], pixels[i][2], pixels[i][3]);
+        }
+      };
+
+      const draw = () => {
+        launchPixel();
+        launchPixel();
+        drawGrid();
+        requestAnimationFrame(draw);
+      };
+
+      const initColoredPixels = () => {
+        for (var i = 0; i < 300; i++) {
+          coloredPixels.push({
+            x: width / 2,
+            y: height / 2,
+            alpha: 0,
+            color: colors[i % 5],
+            vx: -1 + Math.random() * 2,
+            vy: -1 + Math.random() * 2,
+          });
+        }
+      };
+
+      const launchPixel = () => {
+        const rect = canvas.getBoundingClientRect();
+        coloredPixels[currentPixel].x = mousePosition.x - rect.left;
+        coloredPixels[currentPixel].y = mousePosition.y - rect.top;
+        coloredPixels[currentPixel].alpha = 1;
+
+        currentPixel++;
+        if (currentPixel > 299) currentPixel = 0;
+      };
+
+      resize();
+      initColoredPixels();
+      draw();
+
+      document
+        .getElementById("canvas-wrapper")
+        .addEventListener("mousemove", function (e) {
+          const rect = canvas.getBoundingClientRect();
+          mousePosition.x = e.clientX - rect.left;
+          mousePosition.y = e.clientY - rect.top;
         });
-        tl.to(targetElement, {
-          scale: 1,
-          bottom: "-13%",
-          duration: 1,
-        })
-          .to(targetElement1, {
-            left: "10%",
-            duration: 1,
-          })
-          .to(
-            targetElement4,
-            {
-              left: "90%",
-              scale: 1,
-              duration: 1,
-            },
-            "-=1"
-          )
-          .to(
-            targetElement3,
-            {
-              left: "37%",
-              scale: 1,
-              duration: 1,
-            },
-            "-=.5"
-          )
-          .to(
-            targetElement2,
-            {
-              left: "64%",
-              scale: 1,
-              duration: 1,
-            },
-            "-=1"
-          );
-      });
+
+      const touchMove = (e) => {
+        e.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        mousePosition.x = e.touches[0].clientX - rect.left;
+        mousePosition.y = e.touches[0].clientY - rect.top;
+      };
+
+      canvas.addEventListener("touchstart", touchMove);
+      canvas.addEventListener("touchmove", touchMove);
     </script>
   </body>
 </html>
