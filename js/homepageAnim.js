@@ -116,26 +116,19 @@ $(".anim-up-gsap").each(function (index) {
 
 // lottie
 $(document).ready(function(){
-        
-   $(window).scroll(function() {
 
-    if ($(window).width() <= 768) {
-         var offset_custom = 0;
+  let triggerElement1 = $('#animation_1');
+
+  let tlAnim1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement1,
+      start: "top 70%",
+      // markers: true,
+      onEnter: () => {
+        anim_1.play()
+      }
     }
-    else {
-         var offset_custom = $(window).height() / 2;
-    }
-    var hT = $('#animation_1').offset().top,
-        hH = $('#animation_1').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) - offset_custom){
-        if(!$('#animation_1').hasClass('started')){
-         lottie.play('animation1');
-         $("#animation_1").addClass('started');
-        }
-    }
- });
+  });
 
  var anim_1 = lottie.loadAnimation({
      container: document.getElementById('animation_1'), // Required
@@ -149,100 +142,80 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-        
-   $(window).scroll(function() {
 
-    if ($(window).width() <= 768) {
-         var offset_custom = 0;
-    }
-    else {
-         var offset_custom = $(window).height() / 2;
-    }
-    var hT = $('#animation_2').offset().top,
-        hH = $('#animation_2').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) - offset_custom){
-        if(!$('#animation_2').hasClass('started')){
-         lottie.play('animation2');
-         $("#animation_2").addClass('started');
-        }
-    }
+   let triggerElement2 = $('#animation_2');
+ 
+   let tlAnim2 = gsap.timeline({
+     scrollTrigger: {
+       trigger: triggerElement2,
+       start: "top 70%",
+      //  markers: true,
+       onEnter: () => {
+         anim_2.play()
+       }
+     }
+   });
+ 
+  var anim_2 = lottie.loadAnimation({
+      container: document.getElementById('animation_2'), // Required
+      path: '../lottie/icon2.json', // Required
+      renderer: 'svg', // Required
+      loop: false, // Optional
+      autoplay: false, // Optional
+      name: "animation2"
+  })     
+         
  });
 
- var anim_2 = lottie.loadAnimation({
-     container: document.getElementById('animation_2'), // Required
-     path: '../lottie/icon2.json', // Required
-     renderer: 'svg', // Required
-     loop: false, // Optional
-     autoplay: false, // Optional
-     name: "animation2"
- })     
-        
-});
-
+ 
 $(document).ready(function(){
-        
-   $(window).scroll(function() {
 
-    if ($(window).width() <= 768) {
-         var offset_custom = 0;
-    }
-    else {
-         var offset_custom = $(window).height() / 2;
-    }
-    var hT = $('#animation_3').offset().top,
-        hH = $('#animation_3').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) - offset_custom){
-        if(!$('#animation_3').hasClass('started')){
-         lottie.play('animation3');
-         $("#animation_3").addClass('started');
-        }
-    }
+   let triggerElement3 = $('#animation_3');
+ 
+   let tlAnim3 = gsap.timeline({
+     scrollTrigger: {
+       trigger: triggerElement3,
+       start: "top 70%",
+      //  markers: true,
+       onEnter: () => {
+         anim_3.play()
+       }
+     }
+   });
+ 
+  var anim_3 = lottie.loadAnimation({
+      container: document.getElementById('animation_3'), // Required
+      path: '../lottie/icon3.json', // Required
+      renderer: 'svg', // Required
+      loop: false, // Optional
+      autoplay: false, // Optional
+      name: "animation2"
+  })     
+         
  });
 
- var anim_3 = lottie.loadAnimation({
-     container: document.getElementById('animation_3'), // Required
-     path: '../lottie/icon3.json', // Required
-     renderer: 'svg', // Required
-     loop: false, // Optional
-     autoplay: false, // Optional
-     name: "animation3"
- })     
-        
-});
+ $(document).ready(function(){
 
-$(document).ready(function(){
-        
-   $(window).scroll(function() {
-
-    if ($(window).width() <= 768) {
-         var offset_custom = 0;
-    }
-    else {
-         var offset_custom = $(window).height() / 2;
-    }
-    var hT = $('#animation_4').offset().top,
-        hH = $('#animation_4').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) - offset_custom){
-        if(!$('#animation_4').hasClass('started')){
-         lottie.play('animation4');
-         $("#animation_4").addClass('started');
-        }
-    }
+   let triggerElement4 = $('#animation_4');
+ 
+   let tlAnim4 = gsap.timeline({
+     scrollTrigger: {
+       trigger: triggerElement4,
+       start: "top 70%",
+      //  markers: true,
+       onEnter: () => {
+         anim_4.play()
+       }
+     }
+   });
+ 
+  var anim_4 = lottie.loadAnimation({
+      container: document.getElementById('animation_4'), // Required
+      path: '../lottie/icon4.json', // Required
+      renderer: 'svg', // Required
+      loop: false, // Optional
+      autoplay: false, // Optional
+      name: "animation2"
+  })     
+         
  });
-
- var anim_4 = lottie.loadAnimation({
-     container: document.getElementById('animation_4'), // Required
-     path: '../lottie/icon4.json', // Required
-     renderer: 'svg', // Required
-     loop: false, // Optional
-     autoplay: false, // Optional
-     name: "animation4"
- })     
-        
-});

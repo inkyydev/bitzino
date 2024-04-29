@@ -89,9 +89,9 @@ let width, height;
       };
 
       const launchPixel = () => {
-        const rect = canvas.getBoundingClientRect();
-        coloredPixels[currentPixel].x = mousePosition.x - rect.left;
-        coloredPixels[currentPixel].y = mousePosition.y - rect.top + 400;
+        const rect = canvas.getBoundingClientRect(); 
+        coloredPixels[currentPixel].x = mousePosition.x;
+        coloredPixels[currentPixel].y = mousePosition.y + 150;
         coloredPixels[currentPixel].alpha = 1;
 
         currentPixel++;
