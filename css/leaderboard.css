@@ -180,8 +180,8 @@
     vertical-align: middle;
     border-top: 1px solid #353535 !important;
     border-bottom: 1px solid #353535 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     width: 25% !important;
 }
 .table-tabs__content__table table thead td {
@@ -300,8 +300,95 @@
         max-width: 450px;
     }
 }
+@media(max-width:991px){
+    .slot-section__top p {
+        margin-bottom: 10px;
+    }
+    .slot-section {
+        max-width: 768px !important;
+        padding-top: 80px;
+        background-size: 120% auto;
+        background: none !important;
+        position: relative;
+    }
+    .slot-section::before {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        content: '';
+        height: 100%;
+        width: 920px !important;
+        background: url(../images/slot-bg.svg);
+        background-size: 100% auto;
+        background-position: top center;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+    .slot-section__top {
+        max-width: 450px;
+    }
+    .slot-section__bottom__boxes {
+        max-width: 580px;
+        margin-bottom: 170px;
+    }
+    .slot-section__user {
+        margin-right: 0;
+    }
+}
 @media(max-width:767px){
+    .table-tabs__content__table table td {
+        min-width: 120px;
+        font-size: 14px;
+    }
+    .slot-section::before {
+        background-image: url('../images/slog-bg-mob.svg') !important;
+    }
+    .slot-section__bottom__box-image {
+        width: 19px;
+        height: 19px;
+        margin: 0 auto 10px;
+    }
+    .slot-section__bottom__box-number {
+        font-size: 28px;
+    }
+    .slot-section__bottom__box {
+        max-width: calc(20% - 5px);
+        flex-basis: calc(20% - 5px);
+    }
+    .slot-section__bottom__inner {
+        margin-top: 70px;
+    }
+    .slot-section__bottom__boxes {
+        margin-bottom: 140px;
+    }
+    .slot-section::before {
+        width: 950px !important;
+    }
+    .slot-section {
+        max-width: 360px !important;
+        padding-top: 90px;
+    }
+    .slot-section__user {
+        max-width: 150px;
+        margin: 0 auto;
+    }
     .slot-section__user-row__rank {
         margin-bottom: 15px;
+    }
+    .table-tabs__tabs a {
+        min-height: 50px;
+        font-size: 14px;
+        min-width: 33.3%;
+    }
+    .table-tabs__content__filters select {
+        margin-bottom: 20px;
+    }
+    .table-tabs__content__filters {
+        margin-bottom: 0;
+    }
+    .table-tabs {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
