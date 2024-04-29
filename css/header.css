@@ -42,8 +42,8 @@
     }
     .main-nav__items{
         position: fixed;
-        width: 100%;
-        height: calc(100% - 90px);
+        width: 100vw;
+        height: calc(100vh - 90px);
         top: 90px;
         left: 0;
         flex-direction: column;
@@ -52,6 +52,7 @@
         pointer-events: none;
         transform: scale(0.7);
         transition: all .2s ease;
+        z-index: 999;
     }
     .main-nav__items.active{
         opacity: 1;
@@ -87,6 +88,6 @@
     }
     .main-nav__items{
         top: 70px;
-        height: calc(100% - 70px);
+        height: calc(100vh - 70px);
     }
 }
