@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Homepage</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -45,6 +45,15 @@
         <section id="banner_section">
           <div class="container">
             <div class="banner-wrapper">
+              <div class="banner-lines">
+                <video
+                  src="/videos/lines.mp4"
+                  autoplay
+                  playsinline
+                  muted
+                  loop
+                ></video>
+              </div>
               <div class="banner-wrapper__content">
                 <div class="banner-heading">
                   <h1 class="heading-anim">
@@ -224,12 +233,142 @@
           </div>
         </section>
 
+        <section id="entertainment">
+          <div class="container">
+            <div class="entertainment-wrapper">
+              <div class="entertainment-slide-show">
+                <div class="entertainment-wrapper-slide-parent">
+                  <div class="entertainment-wrapper-slide">
+                    <h2>BitZino Games Reinventing Classic Entertainment</h2>
+                    <div class="entertainment-wrapper-single">
+                      <div class="entertainment-box entertainment-box-1 active">
+                        <div class="entertainment-box__content">
+                          <h5>The BitZino Chain</h5>
+                          <h3>A Technological Leap</h3>
+                          <p>
+                            Our advanced blockchain, the BitZino Chain,
+                            leverages Bitcoin's Virtual Machine, offering
+                            scalable solutions, AI-powered smart contracts, and
+                            robust security measures. We're hosting an ecosystem
+                            that guarantees not only exhilarating gameplay but
+                            also uncompromised safety and fairness.
+                          </p>
+                          <div class="roadmap-shapes">
+                            <div class="roadmap-shapes__1"></div>
+                            <div class="roadmap-shapes__2"></div>
+                            <div class="roadmap-shapes__3"></div>
+                            <div class="roadmap-shapes__4"></div>
+                          </div>
+                        </div>
+
+                        <div class="entertainment-box__video">
+                          <div class="entertainment-box__video--wrapper">
+                            <video src="/videos/video-1.mp4"></video>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="entertainment-box entertainment-box-2">
+                        <div class="entertainment-box__content">
+                          <h5>NodeZinos</h5>
+                          <h3>
+                            Revolutionizing <br />
+                            the Online Casino
+                          </h3>
+                          <p>
+                            Introducing NodeZinos, a unique BRC-721 NFT for
+                            users to create and manage personalized
+                            mini-casinos, offering a new level of creativity and
+                            entrepreneurial opportunity in the online betting
+                            world.
+                          </p>
+                          <div class="roadmap-shapes">
+                            <div class="roadmap-shapes__1"></div>
+                            <div class="roadmap-shapes__2"></div>
+                            <div class="roadmap-shapes__3"></div>
+                            <div class="roadmap-shapes__4"></div>
+                          </div>
+                        </div>
+                        <div class="entertainment-box__video">
+                          <div class="entertainment-box__video--wrapper">
+                            <video src="/videos/video-1.mp4"></video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="telegram_collaboration">
+          <div class="anim-div"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <div class="telegram-heading-wrapper">
+                  <h2>
+                    Telegram <br />
+                    Collaboration <br />
+                    Innovation
+                  </h2>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="telegram-content-wrapper">
+                  <div
+                    class="telegram-content-wrapper__single telegram-content-wrapper__1"
+                  >
+                    <h3>Distribution via Telegram: Access Redefined</h3>
+                    <p>
+                      BitZino leverages Telegram's vast user base for
+                      distribution, bypassing traditional barriers to instant
+                      engagement and maximizing accessibility and user
+                      interaction.
+                    </p>
+                  </div>
+                  <div
+                    class="telegram-content-wrapper__single telegram-content-wrapper__2"
+                  >
+                    <h3>Telegram Partnership: The New Frontier</h3>
+                    <p>
+                      Telegram stands as a vital partner in our journey,
+                      offering a platform that combines high user engagement,
+                      efficient revenue models, and a robust customer
+                      acquisition channel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tokenomics">
+          <div class="container">
+            <div class="section-heading">
+              <h5 class="anim-up-gsap">Tokenomics</h5>
+              <h2 class="anim-up-gsap">The BITZ Token Ecosystem</h2>
+              <p class="anim-up-gsap">
+                The BITZ token is central to the BitZino ecosystem, facilitating
+                efficient transaction processing, access to premium features,
+                and a dynamic rewards system.
+              </p>
+            </div>
+            <div class="tokenomics-anim">
+              <img src="images/tokenomics-img.svg" alt="chart" />
+            </div>
+          </div>
+        </section>
+
         <section id="roadmap">
           <div class="container">
             <div class="section-header">
-              <h5>Roadmap</h5>
-              <h2>Charting the Future</h2>
-              <p>
+              <h5 class="anim-up-gsap">Roadmap</h5>
+              <h2 class="anim-up-gsap">Charting the Future</h2>
+              <p class="anim-up-gsap">
                 Our roadmap outlines strategic initiatives that combine
                 technological advancement with player-centric gaming
                 experiences, marking significant milestones like the $BITZ
@@ -238,73 +377,6 @@
               </p>
             </div>
             <div class="roadmap-wrapper">
-              <div class="roadmap-top roadmap-row">
-                <div class="roadmap-inner">
-                  <div
-                    class="roadmap-box roadmap-box-q4-2021 roadmap-box-finished"
-                  >
-                    <h4>Q4 2021</h4>
-                    <h5>Official TYLT Launch</h5>
-                    <p>
-                      This is our project going live, and it includes the launch
-                      of the website, the BSC mainnet deployment of our Token
-                      Contract, our social media channels (Discord, Telegram,
-                      Reddit, Twitter, Instagram) and the initial marketing
-                      push. A community AMA will also be held.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q4-2021">
-                    <h4>Q4 2021</h4>
-                    <h5>Poker dApp</h5>
-                    <p>
-                      Final QA testing of the dApp itself and Smart Contract BSC
-                      testnet deployment, followed by the official launch.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Further expansion of the Poker dApp</h5>
-                    <p>
-                      adding different games, implementing tournament
-                      functionality and enabling the possibility of setting up
-                      private games
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Scaling the marketing efforts</h5>
-                    <p>
-                      closing sponsorship deals with poker influencers with the
-                      aim to grow our playerbase as much as possible, coupled
-                      with a strong social media marketing push
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Exchange listings</h5>
-                    <p>
-                      We aim to be traded on a Tier 2 Exchange by the end of Q1
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>Project Turn Reveal</h5>
-                    <p>
-                      We can’t say much except that it’s immeasurably larger in
-                      scope than Project Flop ever was.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>TYLT Poker LLC</h5>
-                    <p>
-                      TYLT Poker will be incorporated into a Limited Liability
-                      Company, allowing us to obtain a gambling license and
-                      enabling direct Fiat to TYLT conversions and vice-versa.
-                    </p>
-                  </div>
-                </div>
-              </div>
               <div class="parent">
                 <span class="line-scroll linedashed"></span>
                 <span class="line-scroll lineorange"></span>
@@ -313,57 +385,84 @@
               <div class="roadmap-bottom roadmap-row">
                 <div class="roadmap-inner">
                   <div class="roadmap-box roadmap-box-q4-2021">
-                    <h4>Q4 2021</h4>
-                    <h5>Entering the market</h5>
-                    <p>
-                      Completing both the private and public presales, going
-                      live on Pancakeswap, applying for listings on
-                      CoinMarketCap, CoinGecko and BSCScan and publishing our
-                      first audit result.
-                    </p>
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
                   <div class="roadmap-box roadmap-box-q4-2021">
-                    <h4>Q4 2021</h4>
-                    <h5>Community engagement events</h5>
-                    <p>more AMAs and the first giveaways.</p>
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Release of Project Flop</h5>
-                    <p>
-                      This is the first in a series of 3 ambitious blockchain
-                      projects tied to TYLT.
-                    </p>
+                  <div class="roadmap-box roadmap-box-q4-2021">
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Special community events</h5>
-                    <p>
-                      freeroll tournaments available exclusively to $TYLT
-                      holders and launching Rakeback and Bad Beat Jackpot
-                      functionality
-                    </p>
+                  <div class="roadmap-box roadmap-box-q4-2021">
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>TYLT merchandise release</h5>
-                    <p>
-                      Allowing players to exchange both $TYLT and Fiat for
-                      official TYLT merchandise.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>iOS and Android app release</h5>
-                    <p>
-                      TYLT Poker will be more accessible than ever with the
-                      release of our mobile apps.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q3-2022">
-                    <h4>Q3 2022</h4>
-                    <h5>TBA</h5>
-                    <p></p>
+                  <div class="roadmap-box roadmap-box-q4-2021">
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -377,16 +476,16 @@
           </div>
           <div class="container">
             <div class="vision-wrapper">
-              <h5>Our Vision</h5>
-              <h2>Leading the Online Betting Evolution</h2>
-              <p>
+              <h5 class="anim-up-gsap">Our Vision</h5>
+              <h2 class="anim-up-gsap">Leading the Online Betting Evolution</h2>
+              <p class="anim-up-gsap">
                 BitZino is at the forefront of a new era in online betting,
                 blending the reliability of blockchain with the dynamism of AI.
                 We are not just a platform; we are a community where technology
                 harmonizes with tradition, and every player finds their place in
                 the future of gaming.
               </p>
-              <p>
+              <p class="anim-up-gsap">
                 Join us in this journey, where every bet is a new adventure,
                 every game a discovery, and every moment shared with a global
                 community of players.
@@ -414,19 +513,31 @@
       type="text/javascript"
       src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.1/dist/lottie-player.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/homepageAnim.js"></script>
     <script src="js/pixelAnim.js"></script>
+    <script src="js/homepageAnim.js"></script>
 
     <script>
       $(function () {
         $("#footer").load("includes/footer.html");
+      });
+
+      $(document).ready(function () {
+        function toggleNav() {
+          $(".main-nav__hamburger").toggleClass("active");
+          $(".main-nav__items").toggleClass("active");
+          $("body").toggleClass("active");
+        }
+
+        if ($(window).width() < 1024) {
+          $(".main-nav__hamburger").on("click", toggleNav);
+          $(".main-nav__items a").on("click", toggleNav);
+        }
       });
 
       $(document).ready(function () {
@@ -436,7 +547,5 @@
         });
       });
     </script>
-
-    <script></script>
   </body>
 </html>
