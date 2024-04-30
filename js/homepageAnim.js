@@ -2,7 +2,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tlHeading = gsap.timeline();
 
+$(document).ready(function() {
+  // Function to perform hard refresh
+  function hardRefresh() {
+      location.reload(true); // Reload the page from the server (hard refresh)
+  }
 
+  // Detect browser's refresh event
+  $(window).on('beforeunload', function() {
+      // Perform hard refresh when the user manually refreshes the page
+      hardRefresh();
+  });
+
+  // Scroll to the top of the page after reload
+  $(window).on('load', function() {
+      $(window).scrollTop(0);
+  });
+});
 
 tlHeading.from(".anim-span span", 1.5, {
    y: "100%",
