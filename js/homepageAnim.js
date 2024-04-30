@@ -2,6 +2,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tlHeading = gsap.timeline();
 
+
+
 tlHeading.from(".anim-span span", 1.5, {
    y: "100%",
    ease: "power4.out",
@@ -29,6 +31,8 @@ setTimeout(function () {
       $(".btn-group").addClass("active");
    }, 1700);
 }, 500);
+
+
 
 
 $("#banner_section").each(function (index) {
@@ -115,6 +119,30 @@ $(".anim-up-gsap").each(function (index) {
     }
   });
 });
+
+// entertainment
+
+  let entertainmentTrigger = $('.entertainment-wrapper');
+  let entertainmentTarget = $('.entertainment-wrapper-single');
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: entertainmentTrigger,
+      start: "top top",
+      end: "bottom bottom",
+      scrub: .5,
+      markers: true,
+    }
+  });
+  tl.fromTo(entertainmentTarget, {
+      transform: 'translateX(0)',
+      duration: 1
+    },
+    {
+      transform: 'translateX(-200px)',
+      duration: 1
+    }
+  );
 
 // telegram
 

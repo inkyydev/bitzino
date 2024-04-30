@@ -202,6 +202,86 @@
 .lottie-wrapper-all {
   width: 60px;
 }
+/* entertainment */
+.entertainment-wrapper-slide-parent{
+  min-height: 2000px;
+}
+.entertainment-wrapper-slide{
+  overflow: hidden;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  padding-top: 100px;
+}
+.entertainment-wrapper-slide h2{
+  max-width: 526px;
+  margin: 0 auto 50px;
+  text-align: center;
+  line-height: 1.2;
+}
+.entertainment-wrapper-single{
+  display: flex;
+}
+.entertainment-box{
+  display: flex;
+  gap: 52px;
+  padding: 40px;
+  background: #1D1D1D;
+  border-radius: 40px;
+  align-items: center;
+  width: 1140px;
+  max-width: 1140px;
+  min-width: 1140px;
+  margin-right: 45px;
+}
+.entertainment-box__video,
+.entertainment-box__content{
+  flex-basis: 50%;
+  max-width: 50%;
+}
+.entertainment-box__video--wrapper video{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.entertainment-box__content{
+  padding-left: 70px;
+  padding-right: 40px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.entertainment-box__content h5{
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+.entertainment-box__content h3{
+  font-size: 32px;
+  margin: 20px 0 50px;
+}
+.entertainment-box__content p{
+  max-width: 341px;
+  color: #fff;
+  margin-bottom: 0;
+}
+.entertainment-box.active .roadmap-shapes > div{
+  opacity: 1;
+  transform: scale(1);
+}
+.roadmap-shapes{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
 /* our vision */
 #our_vision {
   position: relative;
@@ -278,6 +358,7 @@
 #tokenomics{
   padding: 87px 0 0;
   position: relative;
+  overflow: hidden;
 }
 #tokenomics .container{
   position: relative;
@@ -288,8 +369,10 @@
   background: url(../images/tokenomics-1.svg);
   width: 134px;
   height: 168px;
-  top: 30%;
+  top: 5%;
   left: -5%;
+  animation: tokenAnim 2s linear infinite;
+  animation-delay: 1s;
 }
 #tokenomics .container::after{
   content: '';
@@ -297,8 +380,18 @@
   background: url(../images/tokenomics-2.svg);
   width: 144px;
   height: 169px;
-  top: 0;
-  left: 0;
+  bottom: 2%;
+  right: -5%;
+  animation: tokenAnim 2s linear infinite;
+}
+@keyframes tokenAnim {
+  0%{
+    transform: translateY(0px);
+  }50%{
+    transform: translateY(20px);
+  }100%{
+    transform: translateY(0px);
+  }
 }
 #tokenomics .section-heading{
   max-width: 533px;
@@ -327,6 +420,18 @@
 }
 #roadmap .container {
   max-width: 1270px !important;
+  position: relative;
+}
+#roadmap .container::before{
+  content: '';
+  position: absolute;
+  background: url(../images/tokenomics-3.svg);
+  width: 217px;
+  height: 212px;
+  top: -10%;
+  left: 0%;
+  animation: tokenAnim 2s linear infinite;
+  animation-delay: .5s;
 }
 #roadmap .section-header {
   max-width: 649px;
@@ -367,6 +472,7 @@
   pointer-events: none;
   height: 100%;
 }
+.roadmap-shapes > div,
 .roadmap-curls > span {
   position: absolute;
   width: 50px;
@@ -375,21 +481,25 @@
   transform: scale(0.7);
   transition: all 0.2s ease;
 }
+.roadmap-shapes__1,
 .roadmap-curls__1 {
   top: 0;
   left: 0;
   background-image: url(../images/curl-1.svg);
 }
+.roadmap-shapes__2,
 .roadmap-curls__2 {
   top: 0;
   right: 0;
   background-image: url(../images/curl-2.svg);
 }
+.roadmap-shapes__3,
 .roadmap-curls__3 {
   left: 0;
   bottom: 0;
   background-image: url(../images/curl-3.svg);
 }
+.roadmap-shapes__4,
 .roadmap-curls__4 {
   bottom: 0;
   right: 0;
@@ -562,6 +672,13 @@
   }
 }
 @media (max-width: 767px) {
+  #tokenomics{
+    padding: 60px 0 0;
+  }
+  #tokenomics .container::before{
+    background-size: 60% auto;
+    background-repeat: no-repeat;
+  }
   .banner-lines {
     position: absolute;
     width: 100vw;
