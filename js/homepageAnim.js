@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(CSSRulePlugin);
 
 const tlHeading = gsap.timeline();
 
@@ -219,3 +218,88 @@ $(document).ready(function(){
   })     
          
  });
+
+
+
+ $(document).ready(function(){
+
+   /* Touch Event Handling */
+   function touchHandler(event) {
+       var touch = event.changedTouches[0];
+
+       var simulatedEvent = document.createEvent("MouseEvent");
+       simulatedEvent.initMouseEvent({
+           touchstart: "mousedown",
+           touchmove: "mousemove",
+           touchend: "mouseup"
+       }[event.type], true, true, window, 1,
+           touch.screenX, touch.screenY,
+           touch.clientX, touch.clientY, false,
+           false, false, false, 0, null);
+
+       touch.target.dispatchEvent(simulatedEvent);
+       event.preventDefault();
+   }
+
+   function initTouchEvents() {
+       document.addEventListener("touchstart", touchHandler, true);
+       document.addEventListener("touchmove", touchHandler, true);
+       document.addEventListener("touchend", touchHandler, true);
+       document.addEventListener("touchcancel", touchHandler, true);
+   }
+
+   initTouchEvents(); // Initialize touch event handling
+
+   /*startdrag*/
+   $( ".child" ).draggable({
+       containment: "parent",
+       classes: {
+           "ui-draggable": "highlight"
+       },
+       start: function() {
+       },
+       drag: function() {
+           calculateOrange();
+           moveBottomBoxes();
+       },
+       stop: function() {
+           calculateOrange();
+       }
+   });
+
+   function calculateOrange(){
+       var obj = $('.child');
+       var childPos = obj.offset();
+       var parentPos = obj.parent().offset();
+       var childOffset = {
+           left: childPos.left - parentPos.left
+       }
+       var parentWidth = obj.parent().width();
+       var percentage = (childOffset.left) / parentWidth * 100;
+       $('.parent .lineorange').css('width', percentage+'%');
+   }
+
+   function moveBottomBoxes(){
+       var obj = $('.child');
+       var childPos = obj.offset();
+       var parentPos = obj.parent().offset();
+       var childOffset = {
+           left: childPos.left - parentPos.left
+       }
+       var parentWidth = obj.parent().width();
+       const buttonWidth = $('.child').outerWidth();
+       var percentage = (childOffset.left) / (parentWidth - buttonWidth);
+       let fullWidth = 0;
+
+       $('.roadmap-box').each(function(){
+           fullWidth += $(this).outerWidth(true);
+       });
+
+       const totalWidthDecrease =  $('.roadmap-box').outerWidth(true) * 3;
+
+       var percentageBoxes = (fullWidth - totalWidthDecrease) * percentage;
+       $('.roadmap-bottom .roadmap-inner').css('transform', 'translateX(-'+percentageBoxes+'px)')
+   }
+   /*enddrag*/
+
+});

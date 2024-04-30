@@ -2,14 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Homepage</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/homepage.css" />
@@ -227,9 +231,9 @@
         <section id="roadmap">
           <div class="container">
             <div class="section-header">
-              <h5>Roadmap</h5>
-              <h2>Charting the Future</h2>
-              <p>
+              <h5 class="anim-up-gsap">Roadmap</h5>
+              <h2 class="anim-up-gsap">Charting the Future</h2>
+              <p class="anim-up-gsap">
                 Our roadmap outlines strategic initiatives that combine
                 technological advancement with player-centric gaming
                 experiences, marking significant milestones like the $BITZ
@@ -238,73 +242,6 @@
               </p>
             </div>
             <div class="roadmap-wrapper">
-              <div class="roadmap-top roadmap-row">
-                <div class="roadmap-inner">
-                  <div
-                    class="roadmap-box roadmap-box-q4-2021 roadmap-box-finished"
-                  >
-                    <h4>Q4 2021</h4>
-                    <h5>Official TYLT Launch</h5>
-                    <p>
-                      This is our project going live, and it includes the launch
-                      of the website, the BSC mainnet deployment of our Token
-                      Contract, our social media channels (Discord, Telegram,
-                      Reddit, Twitter, Instagram) and the initial marketing
-                      push. A community AMA will also be held.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q4-2021">
-                    <h4>Q4 2021</h4>
-                    <h5>Poker dApp</h5>
-                    <p>
-                      Final QA testing of the dApp itself and Smart Contract BSC
-                      testnet deployment, followed by the official launch.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Further expansion of the Poker dApp</h5>
-                    <p>
-                      adding different games, implementing tournament
-                      functionality and enabling the possibility of setting up
-                      private games
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Scaling the marketing efforts</h5>
-                    <p>
-                      closing sponsorship deals with poker influencers with the
-                      aim to grow our playerbase as much as possible, coupled
-                      with a strong social media marketing push
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Exchange listings</h5>
-                    <p>
-                      We aim to be traded on a Tier 2 Exchange by the end of Q1
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>Project Turn Reveal</h5>
-                    <p>
-                      We can’t say much except that it’s immeasurably larger in
-                      scope than Project Flop ever was.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>TYLT Poker LLC</h5>
-                    <p>
-                      TYLT Poker will be incorporated into a Limited Liability
-                      Company, allowing us to obtain a gambling license and
-                      enabling direct Fiat to TYLT conversions and vice-versa.
-                    </p>
-                  </div>
-                </div>
-              </div>
               <div class="parent">
                 <span class="line-scroll linedashed"></span>
                 <span class="line-scroll lineorange"></span>
@@ -313,57 +250,84 @@
               <div class="roadmap-bottom roadmap-row">
                 <div class="roadmap-inner">
                   <div class="roadmap-box roadmap-box-q4-2021">
-                    <h4>Q4 2021</h4>
-                    <h5>Entering the market</h5>
-                    <p>
-                      Completing both the private and public presales, going
-                      live on Pancakeswap, applying for listings on
-                      CoinMarketCap, CoinGecko and BSCScan and publishing our
-                      first audit result.
-                    </p>
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
                   <div class="roadmap-box roadmap-box-q4-2021">
-                    <h4>Q4 2021</h4>
-                    <h5>Community engagement events</h5>
-                    <p>more AMAs and the first giveaways.</p>
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Release of Project Flop</h5>
-                    <p>
-                      This is the first in a series of 3 ambitious blockchain
-                      projects tied to TYLT.
-                    </p>
+                  <div class="roadmap-box roadmap-box-q4-2021">
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
-                  <div class="roadmap-box roadmap-box-q1-2022">
-                    <h4>Q1 2022</h4>
-                    <h5>Special community events</h5>
-                    <p>
-                      freeroll tournaments available exclusively to $TYLT
-                      holders and launching Rakeback and Bad Beat Jackpot
-                      functionality
-                    </p>
+                  <div class="roadmap-box roadmap-box-q4-2021">
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>TYLT merchandise release</h5>
-                    <p>
-                      Allowing players to exchange both $TYLT and Fiat for
-                      official TYLT merchandise.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q2-2022">
-                    <h4>Q2 2022</h4>
-                    <h5>iOS and Android app release</h5>
-                    <p>
-                      TYLT Poker will be more accessible than ever with the
-                      release of our mobile apps.
-                    </p>
-                  </div>
-                  <div class="roadmap-box roadmap-box-q3-2022">
-                    <h4>Q3 2022</h4>
-                    <h5>TBA</h5>
-                    <p></p>
+                  <div class="roadmap-box roadmap-box-q4-2021">
+                    <h4>2024</h4>
+                    <h5>BitZino Testnet</h5>
+                    <ul>
+                      <li>Testnet Access Information</li>
+                      <li>Testing Period Duration</li>
+                      <li>Testnet Features Overview</li>
+                      <li>Community Feedback</li>
+                    </ul>
+                    <div class="roadmap-curls">
+                      <span class="roadmap-curls__1"></span>
+                      <span class="roadmap-curls__2"></span>
+                      <span class="roadmap-curls__3"></span>
+                      <span class="roadmap-curls__4"></span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -408,22 +372,17 @@
       <div id="footer"></div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script
       type="text/javascript"
       src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.1/dist/lottie-player.js"></script> -->
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/homepageAnim.js"></script>
     <script src="js/pixelAnim.js"></script>
-
+    <script src="js/homepageAnim.js"></script>
     <script>
       $(function () {
         $("#footer").load("includes/footer.html");
@@ -436,7 +395,5 @@
         });
       });
     </script>
-
-    <script></script>
   </body>
 </html>
