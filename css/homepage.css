@@ -5,6 +5,17 @@
   min-height: 2000px;
   position: relative;
 }
+.banner-lines{
+  position: absolute;
+  width: 99vw;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner-lines video{
+  width: 100%;
+}
 #banner_section::before {
   content: "";
   position: absolute;
@@ -23,6 +34,7 @@
   padding-top: 30px;
   min-height: calc(100vh - 140px);
   overflow: hidden;
+  opacity: 0;
 }
 .banner-wrapper__content {
   position: relative;
@@ -229,6 +241,86 @@
 .vision-wrapper p:first-of-type {
   margin-bottom: 25px;
 }
+/* telegram collaboration */
+#telegram_collaboration{
+  position: relative;
+  padding: 97px 0;
+  overflow: hidden;
+}
+#telegram_collaboration .row{
+  align-items: center;
+  position: relative;
+  z-index: 9;
+}
+.anim-div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0A84FF;
+  width: 0%;
+  height: 100%;
+}
+.telegram-heading-wrapper h2{
+  line-height: 1.2;
+}
+.telegram-content-wrapper h3{
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.telegram-content-wrapper p{
+  color: #fff;
+  max-width: 483px;
+}
+.telegram-content-wrapper__1{
+  margin-bottom: 55px;
+}
+/* tokenomics */
+#tokenomics{
+  padding: 87px 0 0;
+  position: relative;
+}
+#tokenomics .container{
+  position: relative;
+}
+#tokenomics .container::before{
+  content: '';
+  position: absolute;
+  background: url(../images/tokenomics-1.svg);
+  width: 134px;
+  height: 168px;
+  top: 30%;
+  left: -5%;
+}
+#tokenomics .container::after{
+  content: '';
+  position: absolute;
+  background: url(../images/tokenomics-2.svg);
+  width: 144px;
+  height: 169px;
+  top: 0;
+  left: 0;
+}
+#tokenomics .section-heading{
+  max-width: 533px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+#tokenomics .section-heading h2{
+  margin: 25px 0;
+}
+#tokenomics .section-heading h5{
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+#tokenomics .section-heading p{
+  color: #fff;
+}
+.tokenomics-anim{
+  text-align: center;
+}
 /*roadmap*/
 #roadmap {
   padding: 62px 0 106px;
@@ -246,6 +338,7 @@
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 16px;
 }
 #roadmap .section-header h2 {
   margin: 25px 0;
@@ -469,6 +562,29 @@
   }
 }
 @media (max-width: 767px) {
+  .banner-lines {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  .banner-lines video{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #telegram_collaboration{
+    padding: 60px 0 40px;
+  }
+  .telegram-content-wrapper__1{
+    margin-bottom: 30px;
+  }
+  .telegram-heading-wrapper{
+    margin-bottom: 30px;
+  }
   .roadmap-bottom {
     pointer-events: none;
   }

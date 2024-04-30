@@ -13,6 +13,8 @@ tlHeading.from(".anim-span span", 1.5, {
 });
 
 setTimeout(function () {
+   $('.banner-wrapper').css('opacity', '1');
+
    $(".banner-phone-anim").addClass("active");
 
    setTimeout(function () {
@@ -27,6 +29,7 @@ setTimeout(function () {
       $(".btn-group").addClass("active");
    }, 1700);
 }, 500);
+
 
 $("#banner_section").each(function (index) {
    let triggerElement = $(this);
@@ -113,6 +116,52 @@ $(".anim-up-gsap").each(function (index) {
   });
 });
 
+// telegram
+
+const telegramHeading = $('.telegram-heading-wrapper h2');
+const telegramContentFirst = $('.telegram-content-wrapper__1')
+const telegramContentSecond = $('.telegram-content-wrapper__2')
+const animDiv = $('.anim-div')
+
+const tlTelegram = gsap.timeline();
+
+// Add animation to the timeline
+tlTelegram.to(animDiv, {
+  width: '100%',
+  duration: 2,
+  ease: "bounce.out",
+})
+.from(telegramHeading,{
+  y: 50,
+  opacity: 0,
+  duration: .8
+}, '-=1')
+.from(telegramContentFirst, {
+  x: 30,
+  opacity: 0,
+  duration: .8
+}, '-=0.6')
+.from(telegramContentSecond, {
+  x: 30,
+  opacity: 0,
+  duration: .8
+}, '-=0.6')
+;
+
+tlTelegram.pause();
+
+// Create the scrollTrigger with the timeline
+gsap.to("#telegram_collaboration", {
+  scrollTrigger: {
+    trigger: "#telegram_collaboration",
+    start: "59 60%",
+    // markers: true,
+    onEnter: () => {
+      tlTelegram.play();
+    }
+  }
+});
+
 // lottie
 $(document).ready(function(){
 
@@ -130,11 +179,11 @@ $(document).ready(function(){
   });
 
  var anim_1 = lottie.loadAnimation({
-     container: document.getElementById('animation_1'), // Required
-     path: '../lottie/icon1.json', // Required
-     renderer: 'svg', // Required
-     loop: false, // Optional
-     autoplay: false, // Optional
+     container: document.getElementById('animation_1'),
+     path: '../lottie/icon1.json',
+     renderer: 'svg',
+     loop: false,
+     autoplay: false,
      name: "animation1"
  })     
         
@@ -156,11 +205,11 @@ $(document).ready(function(){
    });
  
   var anim_2 = lottie.loadAnimation({
-      container: document.getElementById('animation_2'), // Required
-      path: '../lottie/icon2.json', // Required
-      renderer: 'svg', // Required
-      loop: false, // Optional
-      autoplay: false, // Optional
+      container: document.getElementById('animation_2'), 
+      path: '../lottie/icon2.json', 
+      renderer: 'svg', 
+      loop: false,
+      autoplay: false,
       name: "animation2"
   })     
          
@@ -183,11 +232,11 @@ $(document).ready(function(){
    });
  
   var anim_3 = lottie.loadAnimation({
-      container: document.getElementById('animation_3'), // Required
-      path: '../lottie/icon3.json', // Required
-      renderer: 'svg', // Required
-      loop: false, // Optional
-      autoplay: false, // Optional
+      container: document.getElementById('animation_3'), 
+      path: '../lottie/icon3.json', 
+      renderer: 'svg', 
+      loop: false,
+      autoplay: false,
       name: "animation2"
   })     
          
@@ -209,11 +258,11 @@ $(document).ready(function(){
    });
  
   var anim_4 = lottie.loadAnimation({
-      container: document.getElementById('animation_4'), // Required
-      path: '../lottie/icon4.json', // Required
-      renderer: 'svg', // Required
-      loop: false, // Optional
-      autoplay: false, // Optional
+      container: document.getElementById('animation_4'), 
+      path: '../lottie/icon4.json', 
+      renderer: 'svg', 
+      loop: false,
+      autoplay: false,
       name: "animation2"
   })     
          
@@ -223,83 +272,85 @@ $(document).ready(function(){
 
  $(document).ready(function(){
 
-   /* Touch Event Handling */
-   function touchHandler(event) {
-       var touch = event.changedTouches[0];
+  function touchHandler(event) {
+      var touch = event.changedTouches[0];
+      
+      if ($(touch.target).hasClass('child')) {
+          var simulatedEvent = document.createEvent("MouseEvent");
+          simulatedEvent.initMouseEvent({
+              touchstart: "mousedown",
+              touchmove: "mousemove",
+              touchend: "mouseup"
+          }[event.type], true, true, window, 1,
+              touch.screenX, touch.screenY,
+              touch.clientX, touch.clientY, false,
+              false, false, false, 0, null);
 
-       var simulatedEvent = document.createEvent("MouseEvent");
-       simulatedEvent.initMouseEvent({
-           touchstart: "mousedown",
-           touchmove: "mousemove",
-           touchend: "mouseup"
-       }[event.type], true, true, window, 1,
-           touch.screenX, touch.screenY,
-           touch.clientX, touch.clientY, false,
-           false, false, false, 0, null);
+          touch.target.dispatchEvent(simulatedEvent);
+          event.preventDefault();
+      }
+  }
 
-       touch.target.dispatchEvent(simulatedEvent);
-       event.preventDefault();
-   }
+  function initTouchEvents() {
+      document.addEventListener("touchstart", touchHandler, true);
+      document.addEventListener("touchmove", touchHandler, true);
+      document.addEventListener("touchend", touchHandler, true);
+      document.addEventListener("touchcancel", touchHandler, true);
+  }
 
-   function initTouchEvents() {
-       document.addEventListener("touchstart", touchHandler, true);
-       document.addEventListener("touchmove", touchHandler, true);
-       document.addEventListener("touchend", touchHandler, true);
-       document.addEventListener("touchcancel", touchHandler, true);
-   }
+  initTouchEvents(); 
+  
 
-   initTouchEvents(); // Initialize touch event handling
+  $( ".child" ).draggable({
+      containment: "parent",
+      classes: {
+          "ui-draggable": "highlight"
+      },
+      start: function() {
+      },
+      drag: function() {
+          calculateOrange();
+          moveBottomBoxes();
+          
+      },
+      stop: function() {
+          calculateOrange();
+      }
+  });
 
-   /*startdrag*/
-   $( ".child" ).draggable({
-       containment: "parent",
-       classes: {
-           "ui-draggable": "highlight"
-       },
-       start: function() {
-       },
-       drag: function() {
-           calculateOrange();
-           moveBottomBoxes();
-       },
-       stop: function() {
-           calculateOrange();
-       }
-   });
+  function calculateOrange(){
+      var obj = $('.child');
+      var childPos = obj.offset();
+      var parentPos = obj.parent().offset();
+      var childOffset = {
+          left: childPos.left - parentPos.left
+      }
+      var parentWidth = obj.parent().width();
+      var percentage = (childOffset.left) / parentWidth * 100;
+      $('.parent .lineorange').css('width', percentage+'%');
+  }
 
-   function calculateOrange(){
-       var obj = $('.child');
-       var childPos = obj.offset();
-       var parentPos = obj.parent().offset();
-       var childOffset = {
-           left: childPos.left - parentPos.left
-       }
-       var parentWidth = obj.parent().width();
-       var percentage = (childOffset.left) / parentWidth * 100;
-       $('.parent .lineorange').css('width', percentage+'%');
-   }
+  function moveBottomBoxes(){
+      var obj = $('.child');
+      var childPos = obj.offset();
+      var parentPos = obj.parent().offset();
+      var childOffset = {
+          left: childPos.left - parentPos.left
+      }
+      var parentWidth = obj.parent().width();
+      const buttonWidth = $('.child').outerWidth();
+      var percentage = (childOffset.left) / (parentWidth - buttonWidth);
+      let fullWidth = 0;
 
-   function moveBottomBoxes(){
-       var obj = $('.child');
-       var childPos = obj.offset();
-       var parentPos = obj.parent().offset();
-       var childOffset = {
-           left: childPos.left - parentPos.left
-       }
-       var parentWidth = obj.parent().width();
-       const buttonWidth = $('.child').outerWidth();
-       var percentage = (childOffset.left) / (parentWidth - buttonWidth);
-       let fullWidth = 0;
+      $('.roadmap-box').each(function(){
+          fullWidth += $(this).outerWidth(true);
+      });
 
-       $('.roadmap-box').each(function(){
-           fullWidth += $(this).outerWidth(true);
-       });
+      const totalWidthDecrease =  $('.roadmap-box').outerWidth(true) * 3;
 
-       const totalWidthDecrease =  $('.roadmap-box').outerWidth(true) * 3;
-
-       var percentageBoxes = (fullWidth - totalWidthDecrease) * percentage;
-       $('.roadmap-bottom .roadmap-inner').css('transform', 'translateX(-'+percentageBoxes+'px)')
-   }
-   /*enddrag*/
+      var percentageBoxes = (fullWidth - totalWidthDecrease) * percentage;
+      $('.roadmap-bottom .roadmap-inner').css('transform', 'translateX(-'+percentageBoxes+'px)')
+  }
+ 
 
 });
