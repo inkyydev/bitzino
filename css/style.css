@@ -134,7 +134,7 @@ a.btn-all {
   border-radius: 30px;
   padding:10px 10px 10px 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff !important;
   border: none !important;
   outline: none !important;
   box-shadow: none !important;

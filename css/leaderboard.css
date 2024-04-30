@@ -342,7 +342,7 @@
         font-size: 14px;
     }
     .slot-section::before {
-        background-image: url('../images/slog-bg-mob.svg') !important;
+        background-image: url('../images/slot-bg-mob.svg') !important;
     }
     .slot-section__bottom__box-image {
         width: 19px;
