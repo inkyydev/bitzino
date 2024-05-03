@@ -2,24 +2,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tlHeading = gsap.timeline();
 
-$(document).ready(function() {
-  // Function to perform hard refresh
-  function hardRefresh() {
-      location.reload(true); // Reload the page from the server (hard refresh)
-  }
-
-  // Detect browser's refresh event
-  $(window).on('beforeunload', function() {
-      // Perform hard refresh when the user manually refreshes the page
-      hardRefresh();
-  });
-
-  // Scroll to the top of the page after reload
-  $(window).on('load', function() {
-      $(window).scrollTop(0);
-  });
-});
-
 tlHeading.from(".anim-span span", 1.5, {
    y: "100%",
    ease: "power4.out",
@@ -140,25 +122,56 @@ $(".anim-up-gsap").each(function (index) {
 
   let entertainmentTrigger = $('.entertainment-wrapper');
   let entertainmentTarget = $('.entertainment-wrapper-single');
+  let movingWidth = 0;
+  let boxWidth = $('.entertainment-box').outerWidth(true);
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: entertainmentTrigger,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: .5,
-      markers: true,
-    }
+  $('.entertainment-box').each(function(){
+    movingWidth += $(this).outerWidth(true);
   });
-  tl.fromTo(entertainmentTarget, {
-      transform: 'translateX(0)',
-      duration: 1
-    },
-    {
-      transform: 'translateX(-200px)',
-      duration: 1
-    }
-  );
+
+  let movingDiv = movingWidth - boxWidth;
+
+  console.log(movingWidth);
+
+  setTimeout(function(){
+    let tlEntertainment = gsap.timeline({
+      scrollTrigger: {
+        trigger: entertainmentTrigger,
+        start: "top top",
+        end: "bottom bottom",
+        scrub: .5,
+        markers: true,
+      }
+    });
+    tlEntertainment.fromTo(entertainmentTarget, {
+        x: 0,
+        duration: 1
+      },
+      {
+        x: -movingDiv,
+        duration: 1
+      }
+    );
+
+    gsap.to(".entertainment-box-2", {
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".entertainment-box-2",
+        containerAnimation: tlEntertainment,
+        start: "-50 center",
+        end: 'right center',
+        markers: true,
+        onEnter: () => {
+            $('.entertainment-box-2').addClass('active');
+          },
+          onLeaveBack: () => {
+            $('.entertainment-box-2').removeClass('active');
+        },
+      }
+    });
+
+  }, 1000)
+  
 
 // telegram
 
@@ -194,7 +207,6 @@ tlTelegram.to(animDiv, {
 
 tlTelegram.pause();
 
-// Create the scrollTrigger with the timeline
 gsap.to("#telegram_collaboration", {
   scrollTrigger: {
     trigger: "#telegram_collaboration",

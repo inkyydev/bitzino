@@ -201,10 +201,11 @@
 }
 .lottie-wrapper-all {
   width: 60px;
+  height: 66px;
 }
 /* entertainment */
 .entertainment-wrapper-slide-parent{
-  min-height: 2000px;
+  min-height:4500px;
 }
 .entertainment-wrapper-slide{
   overflow: hidden;
