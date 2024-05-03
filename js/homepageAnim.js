@@ -120,6 +120,7 @@ $(".anim-up-gsap").each(function (index) {
 
 // entertainment
 
+if ($(window).width() > 1024) {
   let entertainmentTrigger = $('.entertainment-wrapper');
   let entertainmentTarget = $('.entertainment-wrapper-single');
   let movingWidth = 0;
@@ -129,7 +130,7 @@ $(".anim-up-gsap").each(function (index) {
     movingWidth += $(this).outerWidth(true);
   });
 
-  let movingDiv = movingWidth - boxWidth;
+  let movingDiv = (movingWidth - boxWidth);
 
   console.log(movingWidth);
 
@@ -139,17 +140,19 @@ $(".anim-up-gsap").each(function (index) {
         trigger: entertainmentTrigger,
         start: "top top",
         end: "bottom bottom",
-        scrub: .5,
-        markers: true,
+        scrub: 1,
+        // markers: true,
       }
     });
     tlEntertainment.fromTo(entertainmentTarget, {
         x: 0,
-        duration: 1
+        duration: 1,
+        ease: "none"
       },
       {
         x: -movingDiv,
-        duration: 1
+        duration: 1,
+        ease: "none"
       }
     );
 
@@ -158,9 +161,9 @@ $(".anim-up-gsap").each(function (index) {
       scrollTrigger: {
         trigger: ".entertainment-box-2",
         containerAnimation: tlEntertainment,
-        start: "-50 center",
+        start: "left center",
         end: 'right center',
-        markers: true,
+        // markers: true,
         onEnter: () => {
             $('.entertainment-box-2').addClass('active');
           },
@@ -170,7 +173,43 @@ $(".anim-up-gsap").each(function (index) {
       }
     });
 
+    gsap.to(".entertainment-box-3", {
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".entertainment-box-3",
+        containerAnimation: tlEntertainment,
+        start: "left center",
+        end: 'right center',
+        markers: true,
+        onEnter: () => {
+            $('.entertainment-box-3').addClass('active');
+          },
+          onLeaveBack: () => {
+            $('.entertainment-box-3').removeClass('active');
+        },
+      }
+    });
+
+    gsap.to(".entertainment-box-4", {
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".entertainment-box-4",
+        containerAnimation: tlEntertainment,
+        start: "left center",
+        end: 'right center',
+        markers: true,
+        onEnter: () => {
+            $('.entertainment-box-4').addClass('active');
+          },
+          onLeaveBack: () => {
+            $('.entertainment-box-4').removeClass('active');
+        },
+      }
+    });
+    
+
   }, 1000)
+}
   
 
 // telegram
