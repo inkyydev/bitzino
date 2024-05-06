@@ -130,7 +130,7 @@ if ($(window).width() > 1024) {
     movingWidth += $(this).outerWidth(true);
   });
 
-  let movingDiv = (movingWidth - boxWidth);
+  let movingDiv = (movingWidth - boxWidth) - 50;
 
   console.log(movingWidth);
 
@@ -180,7 +180,7 @@ if ($(window).width() > 1024) {
         containerAnimation: tlEntertainment,
         start: "left center",
         end: 'right center',
-        markers: true,
+        // markers: true,
         onEnter: () => {
             $('.entertainment-box-3').addClass('active');
           },
@@ -197,7 +197,7 @@ if ($(window).width() > 1024) {
         containerAnimation: tlEntertainment,
         start: "left center",
         end: 'right center',
-        markers: true,
+        // markers: true,
         onEnter: () => {
             $('.entertainment-box-4').addClass('active');
           },

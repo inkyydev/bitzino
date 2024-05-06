@@ -12,6 +12,7 @@
     text-align: center;
     max-width: 529px;
     margin: 0 auto;
+    min-height: 292px;
 }
 .slot-section__top h1 {
     font-size: 38px;
@@ -494,6 +495,7 @@
     }
     .slot-section__top {
         max-width: 450px;
+        min-height: 180px;
     }
     .slot-section__bottom__boxes {
         max-width: 580px;
@@ -504,6 +506,10 @@
     }
 }
 @media(max-width:767px){
+    .slot-section__top{
+        min-height: 230px;
+        padding-top: 35px;
+    }
     .table-tabs__content__box__bottom__icons {
         flex-wrap: wrap;
         row-gap: 10px;

@@ -58,7 +58,10 @@
 }
 .before-login__inner p {
     max-width: 360px;
-    margin: 0 auto 20px
+    margin: 0 auto 5px
+}
+.before-login__inner a{
+    margin-top: 15px;
 }
 
 .after-login__bottom-row__box {
