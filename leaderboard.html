@@ -23,6 +23,10 @@
       <div id="header"></div>
 
       <section class="slot-section">
+        <div class="slot-handle disabled">
+          <div id="animation_1"></div>
+        </div>
+
         <div class="slot-section__inner">
           <div class="slot-section__user">
             <div class="slot-section__user-row row">
@@ -500,6 +504,12 @@
       type="text/javascript"
       src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie_svg.min.js"
+      integrity="sha512-ZfmNTCDjwvHcUB0QrhRYb+K+NO+eXjNQKo7IGd6AAx0dWlG4dEXrk36wAdky7IxM21C+VxjWT8AO0suZKXtfIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/script.js"></script>
     <script>
       $(function () {
@@ -543,6 +553,9 @@
           );
         });
         $(".slot-section__bottom__boxes").addClass("active");
+        setTimeout(() => {
+          $(".slot-handle").removeClass("disabled");
+        }, 2000);
       }
 
       $(".table-tabs__content__filters select").selectpicker({
@@ -559,6 +572,26 @@
           $(".table-tabs__content").attr("data-active", "");
           $(".table-tabs__content#" + id).attr("data-active", "true");
         }
+      });
+
+      var anim_1 = lottie.loadAnimation({
+        container: document.getElementById("animation_1"), // Required
+        path: "../lottie/handle.json", // Required
+        renderer: "svg", // Required
+        loop: false, // Optional
+        autoplay: false, // Optional
+        name: "animation1",
+      });
+
+      // Add event listener for animation completion
+      anim_1.addEventListener("complete", function () {
+        anim_1.goToAndStop(0, true);
+      });
+
+      $(".slot-handle").click(function () {
+        $(this).addClass("disabled");
+        anim_1.play();
+        counterStart();
       });
     </script>
   </body>
