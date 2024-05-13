@@ -479,8 +479,15 @@
     .slot-section__user {
         max-width: 450px;
     }
+    .slot-handle {
+        width: 190px;
+    }
 }
 @media(max-width:991px){
+    .slot-handle {
+        width: 150px;
+        right: -35px;
+    }
     .slot-section__top p {
         margin-bottom: 10px;
     }
